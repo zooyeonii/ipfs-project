@@ -32,7 +32,7 @@ func main() {
 		}
 	}()
 	for i := 0; i < 10; i++ {
-		if err = publish("COPY", `{"hash":`+strconv.Iota(i)+`}`); err != nil {
+		if err = publish("COPY", `{"hash":`+strconv.Itoa(i)+`}`); err != nil {
 			panic(err)
 		}
 
