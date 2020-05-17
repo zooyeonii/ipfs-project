@@ -34,10 +34,10 @@ func NewPubSubSubscription(resp io.ReadCloser) *PubSubSubscription {
 //Next waits for the next record ans returns that.
 func (s *PubSubSubscription) Next() (*Message, error){
 	var r struct{
-		From []byte 'json:"from,omitempty"' //omitempty : 비워두다 
-		Data []byte 'json:"data,omitempty"'
-		Seqno []byte 'json:"seqno,omitempty"'
-		TopicIDs []string 'json:"topicIDs,omitempty"'
+		From []byte `json:"from,omitempty"` //omitempty : 비워두다 
+		Data []byte `json:"data,omitempty"`
+		Seqno []byte `json:"seqno,omitempty"`
+		TopicIDs []string `json:"topicIDs,omitempty"`
 	}
 	err := s.dec.Decode(&r)
 	if err!=nil {
