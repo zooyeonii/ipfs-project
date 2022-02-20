@@ -1,1 +1,1 @@
-# ipfs-project
+# ipfs-pub/sub chatting room
